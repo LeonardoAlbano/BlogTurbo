@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialised;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+    font-size: 62.5%;
+
+    /*Colors*/
+    --color-base-white: #ffffff;
+    --color-base-gray-100: #f5f5f5;
+    --color-base-gray-300: #8d8d99;
+    --color-base-gray-500: #3D3D3D;
+    --color-base-gray-900: #202024;
+
+    font-family: 'Mulish', sans-serif;
+}
+
+html, body, input, section{
+    font-family: 'Mulish', sans-serif;
+}
+
+body{
+    font-size: 1.6rem;
+
+    background-color: rgb(224, 224, 224);
+    color: var(--color-base-gray-900);
+}
+
+
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logo{
+    width: 4.2rem;
+    height: 4.2rem;
+
+    border-radius: 50%;
+}
+
+
+header,
+nav,
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 7.2rem;
+    font-weight: 700;
+}
+
+header{
+    background-color: #387E96;
+
+    padding: 2.0rem 4.0rem;
+}
+
+
+.input-wrapper label{
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+    position: absolute;
+
+}
+
+.input-wrapper input{
+    width: 100%;
+    padding: 1.6rem;
+
+    background-color: var(--color-base-gray-100);
+    border: 0;
+
+    border-radius: .6rem;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+    opacity: 0.56;
+    color: var(--color-base-gray-500);
+}
+
+.avatar{
+    width: 4.2rem;
+    height: 4.2rem;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+/* Pegar todo espaço disponvél */
+header form{
+    flex: 1;
+}
+
+
+/********** Configuração Main **********/
+main{
+    background-color: rgb(224, 224, 224);
+
+    display: flex;
+    
+    padding-top: 4.0rem;
+    padding-inline: 10.9rem;
+
+    overflow-y: scroll;
+
+}
+
+
+section{
+    width: 80%;
+
+     display: flex;
+     flex-direction: column;
+}
+
+section img{
+    width: 103.5rem;
+    height: 63.5rem;
+
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: .9rem;
+
+    margin-bottom: 3.5rem;
+}
+
+section h1{
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+
+    margin-bottom: 3.5rem;
+}
+
+.h1-like{
+    width: 103.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    border: none;
+    border-radius: 50%;
+    background: none;
+
+}
+
+button img{
+    width: 4.2rem;
+    height: 4.2rem;
+}
+
+
+section p{
+    width: 103.5rem;
+
+
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+
+    margin-bottom: 3.0rem;
+}
+
+h3{
+    font-size: 2.2rem;
+}
+
+aside{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 3.0rem;
+}
+
+aside img{
+    width: 15.1rem;
+    height: 9.4rem;
+
+    border-radius: .7rem;
+   
+    aspect-ratio: 16/9;
+    object-fit: cover;
+
+}
+
+figure{
+    display: flex;
+    align-items: center;
+    gap: 2.0rem;
+
+}
+
+figcaption{
+    width: 20.5rem;
+}
+
+figcaption h2{
+    margin-bottom: 1.0rem;
+
+    font-size: 1.7rem;
+}
+
+figcaption span{
+    font-size: 1.3rem;
+}
+
+/********** Configurações Rodapé **********/
+footer{
+    background-color: #387E96;
+
+}
+
+footer p{
+    text-align: center;
+    padding: 1.6rem;
+    font-weight: 600;
+}
+
+
+header{
+    --startY: -100%;
+    animation: move .2s;
+}
+
+footer{
+    --startY: 100%;
+    animation: move .2s;
+}
+
+@keyframes move {
+    from{
+        transform: translateY(var(--startY));
+    }
+}
+
+section,
+aside,
+figure{
+    --delay: .2s;
+    animation: appear .2s var(--delay) backwards;
+}
+
+@keyframes appear{
+    0% {
+        opacity: 0;
+        transform: scale(0.7)
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+}
