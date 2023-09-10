@@ -52,7 +52,7 @@ nav,
 nav ul{
     display: flex;
     align-items: center;
-    gap: 7.2rem;
+    gap: 2.2rem;
     font-weight: 700;
 }
 
@@ -110,6 +110,7 @@ main{
     background-color: rgb(224, 224, 224);
 
     display: flex;
+    gap: 2.0rem;
     
     padding-top: 4.0rem;
     padding-inline: 10.9rem;
@@ -127,8 +128,8 @@ section{
 }
 
 section img{
-    width: 103.5rem;
-    height: 63.5rem;
+    max-width: 103.5rem;
+    max-height: 63.5rem;
 
     aspect-ratio: 16/9;
     object-fit: cover;
@@ -146,7 +147,7 @@ section h1{
 }
 
 .h1-like{
-    width: 103.5rem;
+    max-width: 103.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,13 +161,13 @@ button{
 }
 
 button img{
-    width: 4.2rem;
-    height: 4.2rem;
+    max-width: 4.2rem;
+    max-height: 4.2rem;
 }
 
 
 section p{
-    width: 103.5rem;
+    max-width: 103.5rem;
 
 
     font-size: 1.4rem;
@@ -263,5 +264,22 @@ figure{
 
     50%{
         transform: scale(1.2);
+    }
+}
+
+
+/* Estilos para telas menores que 768px */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding-inline: 3rem; 
+    }
+
+    section {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
     }
 }
